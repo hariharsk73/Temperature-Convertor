@@ -1,0 +1,82 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: linear-gradient(to bottom right, #ffffff, #e3f2fd);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(106, 17, 203, 0.3);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+.conversion-options {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.conversion-options label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #6a11cb;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6a11cb;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+#result.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
